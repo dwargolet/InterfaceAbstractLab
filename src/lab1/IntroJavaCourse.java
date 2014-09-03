@@ -1,9 +1,10 @@
 package lab1;
 
 /**
- * Describe responsibilities here.
+ * Extends the super class as well as has it's own unique property, overrides
+ * the "generateClassInfo" method as it adds the prerequisites to it
  *
- * @author      your name goes here
+ * @author      Daniel Wargolet
  * @version     1.00
  */
 public class IntroJavaCourse extends CourseCatalog{
