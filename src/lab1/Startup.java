@@ -19,15 +19,31 @@ public class Startup {
         advancedJava.setCourseNumber("7893");
         advancedJava.setClassCredits(4);
 
-        advancedJava.generateClassInfo();
+        advancedJava.printClassInfo();
+        System.out.println("-------------------");
+        IntroJavaCourse introJavaClass = new IntroJavaCourse("",
+        "", "", 0);
+ 
+        introJavaClass.setPrerequisites("Intro to Programming");
+        introJavaClass.setCourseName("intro to java");
+        introJavaClass.setCourseNumber("1234");
+        introJavaClass.setClassCredits(3);
+
+        introJavaClass.printClassInfo();
         
-        
-        
-        
+         System.out.println("-------------------");
+         
+        IntroToProgrammingCourse introProgramClass = new IntroToProgrammingCourse("", 
+                "", 0);
+ 
+        introProgramClass.setCourseName("intro to programming");
+        introProgramClass.setCourseNumber("0204");
+        introProgramClass.setClassCredits(2);
+
+        introProgramClass.printClassInfo();
         
     }
 }
-
 
 /** using Liskov's method requires every property to be in the superclass
 * if you have a property that is unique to a subclass, it wont run. It looks for the

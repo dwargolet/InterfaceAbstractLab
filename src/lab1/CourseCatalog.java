@@ -24,9 +24,7 @@ public abstract class CourseCatalog {
 
     public void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
-            System.exit(0);
+            System.out.println("Error: courseName cannot be null of empty string");
         }
         this.courseName = courseName;
     }
@@ -55,6 +53,10 @@ public abstract class CourseCatalog {
         printClassName();
         printClassNumber();
         printClassCredits();    
+    }
+    
+    public void printClassInfo(){
+        generateClassInfo();
     }
     
     public void setClassCredits(double classCredits) {
