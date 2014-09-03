@@ -1,9 +1,8 @@
 package lab1;
 
-import javax.swing.JOptionPane;
-
 /**
- * Describe responsibilities here.
+ * AdvancedJava extends the course catalog, using all of the same fields with the
+ * specific property of "prerequisites" as not all classes have one.
  *
  * @author      Daniel Wargolet
  * @version     1.00
@@ -15,12 +14,7 @@ public class AdvancedJavaCourse extends CourseCatalog{
     public AdvancedJavaCourse(String prerequisites, String courseName, String courseNumber, double classCredits) {
         super(courseName, courseNumber, classCredits);
         this.prerequisites = prerequisites;
-    }
-
-    public String getCapitalizedCourseName() {
-        return this.getCourseName().toUpperCase();
-    }
-
+    }    
 
     public String getPrerequisites() {
         return prerequisites;
@@ -28,12 +22,20 @@ public class AdvancedJavaCourse extends CourseCatalog{
 
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
+            System.out.println("Error: Prerequisites cannot be null of empty string");
         }
         this.prerequisites = prerequisites;
     }
 
+    @Override
+    public void generateClassInfo(){
+        printClassName();
+        printClassNumber();
+        printClassCredits();
+        printPrerequisites();
+    }
     
+    public void printPrerequisites(){
+        System.out.println("Class Prerequisites: " + prerequisites);
+    }
 }

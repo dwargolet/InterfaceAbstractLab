@@ -30,6 +30,11 @@ public abstract class CourseCatalog {
         }
         this.courseName = courseName;
     }
+    
+    //left entire name to capialized as some reports use that format
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
+    }
 
     public String getCourseNumber() {
         return courseNumber;
@@ -37,9 +42,7 @@ public abstract class CourseCatalog {
 
     public void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseNumber cannot be null of empty string");
-            System.exit(0);
+            System.out.println("Error: Course number cannot be null of empty string");
         }
         this.courseNumber = courseNumber;
     }
@@ -48,7 +51,6 @@ public abstract class CourseCatalog {
         return classCredits;
     }
 
-    
     public void generateClassInfo(){
         printClassName();
         printClassNumber();
@@ -57,13 +59,13 @@ public abstract class CourseCatalog {
     
     public void setClassCredits(double classCredits) {
         if(classCredits < 0.5 || classCredits > 4.0) {
-            System.out.println("Error: credits must be in the range 0.5 to 4.0");
+            System.out.println("Error: Credits must be in the range 0.5 to 4.0");
         }
         this.classCredits = classCredits;
     }
     
     public void printClassName(){
-        System.out.println("Course Name: " + courseName);
+        System.out.println("Course Name: " + getCapitalizedCourseName());
     };
     
     public void printClassNumber(){

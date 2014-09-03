@@ -8,10 +8,14 @@ public class Startup {
 
     public static void main(String[] args) {
         
-        AdvancedJavaCourse advancedJavaCourse = new AdvancedJavaCourse("Intro to Java", 
-            "Advanced Java", "0", 0);
-        
-        
-        //advancedJavaCourse.generateClassInfo();
+        AdvancedJavaCourse advancedJava = new AdvancedJavaCourse("",
+        "", "", 0);
+ 
+        advancedJava.setPrerequisites("Intro to Java");
+        advancedJava.setCourseName("advanced java");
+        advancedJava.setCourseNumber("7893");
+        advancedJava.setClassCredits(4);
+
+        advancedJava.generateClassInfo();
     }
 }
