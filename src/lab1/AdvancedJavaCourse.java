@@ -15,11 +15,13 @@ public class AdvancedJavaCourse extends CourseCatalog{
         super(courseName, courseNumber, classCredits);
         this.prerequisites = prerequisites;
     }    
-
+    
+    
     public String getPrerequisites() {
         return prerequisites;
     }
-
+    
+    
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
             System.out.println("Error: Prerequisites cannot be null of empty string");
@@ -34,6 +36,7 @@ public class AdvancedJavaCourse extends CourseCatalog{
         printClassCredits();
         printPrerequisites();
     }
+    
     
     public void printPrerequisites(){
         System.out.println("Class Prerequisites: " + prerequisites);
