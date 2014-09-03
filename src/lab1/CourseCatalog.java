@@ -10,12 +10,12 @@ public abstract class CourseCatalog {
     
     private String courseName = "";
     private String courseNumber = "";
-    private double credits;
+    private double classCredits;
 
-    public CourseCatalog(String courseName, String courseNumber, double credits) {
+    public CourseCatalog(String courseName, String courseNumber, double classCredits) {
         this.courseName = courseName;
         this.courseNumber = courseNumber;
-        this.credits = credits;
+        this.classCredits = classCredits;
     }
 
     public String getCourseName() {
@@ -44,19 +44,33 @@ public abstract class CourseCatalog {
         this.courseNumber = courseNumber;
     }
 
-    public double getCredits() {
-        return credits;
+    public double getClassCredits() {
+        return classCredits;
     }
 
-    public void setCredits(double credits) {
-        if(credits < 0.5 || credits > 4.0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
-        }
-        this.credits = credits;
+    
+    public void generateClassInfo(){
+        printClassName();
+        printClassNumber();
+        printClassCredits();    
     }
     
+    public void setClassCredits(double classCredits) {
+        if(classCredits < 0.5 || classCredits > 4.0) {
+            System.out.println("Error: credits must be in the range 0.5 to 4.0");
+        }
+        this.classCredits = classCredits;
+    }
     
+    public void printClassName(){
+        System.out.println("Course Name: " + courseName);
+    };
     
+    public void printClassNumber(){
+        System.out.println("Course Number: " + courseNumber);
+    };
+    
+    public void printClassCredits(){
+        System.out.println("Class Credits: " + classCredits);
+    };
 }
