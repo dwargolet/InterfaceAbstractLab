@@ -10,10 +10,10 @@ package lab2;
  * @version     1.00
  */
 public class AdvancedJavaCourse implements CourseCatalog{
-    private String courseName = "";
-    private String courseNumber = "";
+    private String courseName;
+    private String courseNumber;
     private double classCredits;
-    private String prerequisites = "";
+    private String prerequisites;
 
     
     
@@ -37,8 +37,8 @@ public class AdvancedJavaCourse implements CourseCatalog{
         return courseName;
     }
     
-    @Override
-    public void setCourseName(String CourseName){
+    
+    public void setCourseName(String courseName){
         if(courseName == null || courseName.length() == 0) {
             System.out.println("Error: courseName cannot be null of empty string");
         }
@@ -55,7 +55,7 @@ public class AdvancedJavaCourse implements CourseCatalog{
     }
     
     @Override
-    public void setCourseNumber(String CourseNumber){
+    public void setCourseNumber(String courseNumber){
         if(courseNumber == null || courseNumber.length() == 0) {
             System.out.println("Error: Course number cannot be null of empty string");
         }
@@ -68,7 +68,7 @@ public class AdvancedJavaCourse implements CourseCatalog{
     }
     
     @Override
-    public void setClassCredits(double ClassCredits){
+    public void setClassCredits(double classCredits){
         if(classCredits < 0.5 || classCredits > 4.0) {
             System.out.println("Error: Credits must be in the range 0.5 to 4.0");
         }
@@ -98,5 +98,8 @@ public class AdvancedJavaCourse implements CourseCatalog{
         printPrerequisites();
     }
     
-    
+    @Override
+    public void printClassInfo(){
+        generateClassInfo();
+    }
 }

@@ -13,6 +13,7 @@ public interface CourseCatalog {
     public abstract void setClassCredits(double ClassCredits);   
     
     public abstract void generateClassInfo();
+    public abstract void printClassInfo();
     
     public abstract void printClassName();
     public abstract void printClassNumber();

@@ -1,60 +1,83 @@
 package lab2;
 
-import javax.swing.JOptionPane;
-
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Daniel Wargolet
  * @version     1.00
  */
 public class IntroToProgrammingCourse implements CourseCatalog{
     private String courseName;
     private String courseNumber;
-    private double credits;
+    private double classCredits;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
-    }
-
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    public final void setCourseNumber(String courseNumber) {
-        if(courseNumber == null || courseNumber.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseNumber cannot be null of empty string");
-            System.exit(0);
-        }
-        this.courseNumber = courseNumber;
-    }
-
-    public double getCredits() {
-        return credits;
-    }
-
-    public void setCredits(double credits) {
-        if(credits < 0.5 || credits > 4.0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
-        }
-        this.credits = credits;
-    }
-
-    public String getCourseName() {
+  @Override
+    public String getCourseName(){
         return courseName;
     }
-
-    public final void setCourseName(String courseName) {
+    
+    public void setCourseName(String courseName){
         if(courseName == null || courseName.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
-            System.exit(0);
+            System.out.println("Error: courseName cannot be null of empty string");
         }
         this.courseName = courseName;
+    }   
+    
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
+    }
+    
+    @Override
+    public String getCourseNumber(){
+        return courseNumber;
+    }
+    
+    @Override
+    public void setCourseNumber(String courseNumber){
+        if(courseNumber == null || courseNumber.length() == 0) {
+            System.out.println("Error: Course number cannot be null of empty string");
+        }
+        this.courseNumber = courseNumber;
+    }   
+    
+    @Override
+    public double getClassCredits(){
+        return classCredits;
+    }
+    
+    @Override
+    public void setClassCredits(double classCredits){
+        if(classCredits < 0.5 || classCredits > 4.0) {
+            System.out.println("Error: Credits must be in the range 0.5 to 4.0");
+        }
+        this.classCredits = classCredits;
+    }
+    
+    @Override
+    public void printClassName(){
+        System.out.println("Course Name: " + getCapitalizedCourseName());
+    };
+    
+    @Override
+    public void printClassNumber(){
+        System.out.println("Course Number: " + courseNumber);
+    };
+    
+    @Override
+    public void printClassCredits(){
+        System.out.println("Class Credits: " + classCredits);
+    };
+    
+    @Override
+    public void generateClassInfo(){
+        printClassName();
+        printClassNumber();
+        printClassCredits();
+    }
+    
+    @Override
+    public void printClassInfo(){
+        generateClassInfo();
     }
 
     
