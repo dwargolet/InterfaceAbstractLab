@@ -2,7 +2,8 @@ package lab1;
 
 /**
  * AdvancedJava extends the course catalog, using all of the same fields with the
- * specific property of "prerequisites" as not all classes have one.
+ * specific property of "prerequisites" as not all classes have one. It also
+ * override the "generateClassInfo" to include the prerequisite in the "printClassInfo"
  *
  * @author      Daniel Wargolet
  * @version     1.00
@@ -16,11 +17,10 @@ public class AdvancedJavaCourse extends CourseCatalog{
         this.prerequisites = prerequisites;
     }    
     
-    
+
     public String getPrerequisites() {
         return prerequisites;
     }
-    
     
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
