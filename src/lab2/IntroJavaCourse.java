@@ -6,7 +6,7 @@ package lab2;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroJavaCourse {
+public class IntroJavaCourse implements CourseCatalog{
     String courseName;
     private String courseNumber;
     private double credits;

@@ -45,6 +45,19 @@ public class Startup {
     }
 }
 
+/** I personally prefer abstract classes over interfaces.  I feel that by creating
+ * classes that extend another class you end up doing less overriding. Where it is
+ * possible that even with interfaces this can be done, by extending a class that
+ * utilizes the interface, you are still overriding every method from an interface.
+ * Abstract classes, depending on the type of class may not require you to override a method
+ * Of course a downfall of both is that if at any point a class needs another property or method
+ * added, it affects every class that extends or implements this specific class.
+ * However, the affect of this can be lessened by breaking up into multiple classes
+ * 
+ */
+
+
+
 /** using Liskov's method requires every property to be in the superclass
 * if you have a property that is unique to a subclass, it wont run. It looks for the
 * property in the subclass.  I don't believe that there is any real good time to 

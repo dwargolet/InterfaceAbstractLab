@@ -9,7 +9,7 @@ public interface CourseCatalog {
     public abstract String getCourseNumber();
     public abstract void setCourseNumber(String CourseNumber);   
     
-    public abstract String getClassCredits();
+    public abstract double getClassCredits();
     public abstract void setClassCredits(double ClassCredits);   
     
     public abstract void generateClassInfo();
