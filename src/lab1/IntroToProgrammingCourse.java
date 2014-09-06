@@ -11,9 +11,9 @@ package lab1;
  */
 public class IntroToProgrammingCourse extends CourseCatalog{
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber, double classCredits) {
-        super(courseName, courseNumber, classCredits);
-    }
+//    public IntroToProgrammingCourse(String courseName, String courseNumber, double classCredits) {
+//        super(courseName, courseNumber, classCredits);
+//    }
 
     
 }

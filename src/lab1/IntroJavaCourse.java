@@ -12,7 +12,7 @@ public class IntroJavaCourse extends CourseCatalog{
     private String prerequisites;
 
     public IntroJavaCourse(String prerequisites, String courseName, String courseNumber, double classCredits) {
-        super(courseName, courseNumber, classCredits);
+//        super(courseName, courseNumber, classCredits);
         this.prerequisites = prerequisites;
     }
 

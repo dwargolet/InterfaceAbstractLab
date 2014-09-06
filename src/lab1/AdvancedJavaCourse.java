@@ -13,7 +13,7 @@ public class AdvancedJavaCourse extends CourseCatalog{
     private String prerequisites;
 
     public AdvancedJavaCourse(String prerequisites, String courseName, String courseNumber, double classCredits) {
-        super(courseName, courseNumber, classCredits);
+//        super(courseName, courseNumber, classCredits);
         this.prerequisites = prerequisites;
     }    
     

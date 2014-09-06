@@ -10,11 +10,11 @@ public abstract class CourseCatalog {
     private String courseNumber = "";
     private double classCredits;
 
-    public CourseCatalog(String courseName, String courseNumber, double classCredits) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-        this.classCredits = classCredits;
-    }
+//    public CourseCatalog(String courseName, String courseNumber, double classCredits) {
+//        this.courseName = courseName;
+//        this.courseNumber = courseNumber;
+//        this.classCredits = classCredits;
+//    }
 
     public String getCourseName() {
         return courseName;
@@ -66,13 +66,13 @@ public abstract class CourseCatalog {
     
     public void printClassName(){
         System.out.println("Course Name: " + getCapitalizedCourseName());
-    };
+    }
     
     public void printClassNumber(){
         System.out.println("Course Number: " + courseNumber);
-    };
+    }
     
     public void printClassCredits(){
         System.out.println("Class Credits: " + classCredits);
-    };
+    }
 }
