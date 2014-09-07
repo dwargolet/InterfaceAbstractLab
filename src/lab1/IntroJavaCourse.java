@@ -32,7 +32,7 @@ public class IntroJavaCourse extends CourseCatalog{
     }
 
     
-    @Override
+ 
     public void generateClassInfo(){
         printClassName();
         printClassNumber();
@@ -42,7 +42,7 @@ public class IntroJavaCourse extends CourseCatalog{
     }
 
 
-    public void printPrerequisites(){
+    private void printPrerequisites(){
         System.out.println("Class Prerequisites: " + prerequisites);
     }    
 }

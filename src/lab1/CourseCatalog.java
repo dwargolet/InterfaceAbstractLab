@@ -1,5 +1,7 @@
 package lab1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Daniel
@@ -22,7 +24,9 @@ public abstract class CourseCatalog {
 
     public void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
-            System.out.println("Error: courseName cannot be null of empty string");
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseName cannot be null of empty string");
+            System.exit(0);
         }
         this.courseName = courseName;
     }
@@ -38,7 +42,9 @@ public abstract class CourseCatalog {
 
     public void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
-            System.out.println("Error: Course number cannot be null of empty string");
+            JOptionPane.showMessageDialog(null,
+                    "Error: Course number cannot be null of empty string");
+            System.exit(0);
         }
         this.courseNumber = courseNumber;
     }
@@ -47,7 +53,7 @@ public abstract class CourseCatalog {
         return classCredits;
     }
 
-    public void generateClassInfo(){
+    private void generateClassInfo(){
         printClassName();
         printClassNumber();
         printClassCredits();    
@@ -55,14 +61,17 @@ public abstract class CourseCatalog {
     
     public void printClassInfo(){
         generateClassInfo();
+        System.out.println("-------------------");
     }
     
-    public void setClassCredits(double classCredits) {
+    public void setClassCredits(double classCredits){
         if(classCredits < 0.5 || classCredits > 4.0) {
-            System.out.println("Error: Credits must be in the range 0.5 to 4.0");
+            JOptionPane.showMessageDialog(null,
+                    "Error: Credits must be in the range 0.5 to 4.0");
+            System.exit(0);
         }
         this.classCredits = classCredits;
-    }
+    }           
     
     public void printClassName(){
         System.out.println("Course Name: " + getCapitalizedCourseName());

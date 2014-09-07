@@ -1,5 +1,7 @@
 package lab2;
 
+import javax.swing.JOptionPane;
+
 
 /**
  * the AdvancedJavaCourse is implementing the interface, meaning it must have
@@ -21,14 +23,16 @@ public class AdvancedJavaCourse implements CourseCatalog{
         return prerequisites;
     }
     
-    public void setPrerequisites(String prerequisites){
+    public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
-            System.out.println("Error: Prerequisites cannot be null of empty string");
+           JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
         }
         this.prerequisites = prerequisites;
     }
     
-    public void printPrerequisites(){
+    private void printPrerequisites(){
         System.out.println("Class Prerequisites: " + prerequisites);
     }
     
@@ -40,8 +44,9 @@ public class AdvancedJavaCourse implements CourseCatalog{
     
     public void setCourseName(String courseName){
         if(courseName == null || courseName.length() == 0) {
-            System.out.println("Error: courseName cannot be null of empty string");
-        }
+            JOptionPane.showMessageDialog(null,
+                "Error: courseName cannot be null of empty string");
+            System.exit(0);
         this.courseName = courseName;
     }   
     

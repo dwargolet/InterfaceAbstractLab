@@ -33,8 +33,8 @@ public class AdvancedJavaCourse extends CourseCatalog{
         this.prerequisites = prerequisites;
     }
 
-    @Override
-    public void generateClassInfo(){
+   
+    private void generateClassInfo(){
         printClassName();
         printClassNumber();
         printClassCredits();
