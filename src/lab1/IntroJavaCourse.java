@@ -1,5 +1,7 @@
 package lab1;
 
+import javax.swing.JOptionPane;
+
 /**
  * Extends the super class as well as has it's own unique property, overrides
  * the "generateClassInfo" method as it adds the prerequisites to it
@@ -22,7 +24,9 @@ public class IntroJavaCourse extends CourseCatalog{
 
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
-            System.out.println("Error: Prerequisites cannot be null of empty string");
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
         }
         this.prerequisites = prerequisites;
     }
@@ -34,6 +38,7 @@ public class IntroJavaCourse extends CourseCatalog{
         printClassNumber();
         printClassCredits();
         printPrerequisites();
+        System.out.println("-------------------");
     }
 
 

@@ -9,18 +9,17 @@ public class Startup {
     public static void main(String[] args) {
         
         
-       // CourseCatalog advancedJava = new AdvancedJavaCourse("",
-       // "", "", 0);
+      
         AdvancedJavaCourse advancedJava = new AdvancedJavaCourse("",
         "", "", 0);
  
-        advancedJava.setPrerequisites("Intro to Java");
+        advancedJava.setPrerequisites("Intro to Programming");
         advancedJava.setCourseName("advanced java");
         advancedJava.setCourseNumber("7893");
         advancedJava.setClassCredits(4);
 
         advancedJava.printClassInfo();
-        System.out.println("-------------------");
+        
         IntroJavaCourse introJavaClass = new IntroJavaCourse("",
         "", "", 0);
  
@@ -31,7 +30,6 @@ public class Startup {
 
         introJavaClass.printClassInfo();
         
-         System.out.println("-------------------");
          
          
         CourseCatalog introProgramClass = new IntroToProgrammingCourse();
