@@ -41,17 +41,14 @@ public class AdvancedJavaCourse implements CourseCatalog{
         return courseName;
     }
     
-    
+    @Override
     public void setCourseName(String courseName){
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
                 "Error: courseName cannot be null of empty string");
             System.exit(0);
         this.courseName = courseName;
-    }   
-    
-    public String getCapitalizedCourseName() {
-        return this.getCourseName().toUpperCase();
+        } 
     }
     
     @Override
@@ -62,9 +59,11 @@ public class AdvancedJavaCourse implements CourseCatalog{
     @Override
     public void setCourseNumber(String courseNumber){
         if(courseNumber == null || courseNumber.length() == 0) {
-            System.out.println("Error: Course number cannot be null of empty string");
+            JOptionPane.showMessageDialog(null,
+                "Error: Course number cannot be null of empty string");
+            System.exit(0);
+        this.courseNumber = courseNumber;    
         }
-        this.courseNumber = courseNumber;
     }   
     
     @Override
@@ -75,14 +74,16 @@ public class AdvancedJavaCourse implements CourseCatalog{
     @Override
     public void setClassCredits(double classCredits){
         if(classCredits < 0.5 || classCredits > 4.0) {
-            System.out.println("Error: Credits must be in the range 0.5 to 4.0");
-        }
+            JOptionPane.showMessageDialog(null,
+                "Error: Credits must be in the range 0.5 to 4.0");
+            System.exit(0);
         this.classCredits = classCredits;
-    }
+        }
+    } 
     
     @Override
     public void printClassName(){
-        System.out.println("Course Name: " + getCapitalizedCourseName());
+        System.out.println("Course Name: " + courseName);
     };
     
     @Override
