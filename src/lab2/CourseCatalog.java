@@ -1,5 +1,5 @@
 package lab2;
-
+import javax.swing.JOptionPane;
 public interface CourseCatalog {
  
     

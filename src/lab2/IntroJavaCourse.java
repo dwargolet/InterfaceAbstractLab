@@ -39,7 +39,7 @@ public class IntroJavaCourse implements CourseCatalog{
     
     @Override
     public String getCourseName(){
-        return courseName.toUpperCase();
+        return courseName;
     }
     
     @Override
@@ -48,8 +48,8 @@ public class IntroJavaCourse implements CourseCatalog{
             JOptionPane.showMessageDialog(null,
                 "Error: courseName cannot be null of empty string");
             System.exit(0);
-        this.courseName = courseName;
         }   
+        this.courseName = courseName;
     }
     
     @Override
@@ -62,9 +62,9 @@ public class IntroJavaCourse implements CourseCatalog{
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
                 "Error: Course number cannot be null of empty string");
-            System.exit(0);
-        this.courseNumber = courseNumber;    
+            System.exit(0);    
         }
+        this.courseNumber = courseNumber;
     }   
     
     @Override
@@ -78,13 +78,13 @@ public class IntroJavaCourse implements CourseCatalog{
             JOptionPane.showMessageDialog(null,
                 "Error: Credits must be in the range 0.5 to 4.0");
             System.exit(0);
-        this.classCredits = classCredits;
         }
+        this.classCredits = classCredits;
     }
     
     @Override
     public void printClassName(){
-        System.out.println("Course Name: " + courseName);
+        System.out.println("Course Name: " + courseName.toUpperCase());
     }
     
     @Override
