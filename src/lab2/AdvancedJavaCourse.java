@@ -101,6 +101,7 @@ public class AdvancedJavaCourse implements CourseCatalog{
         printClassNumber();
         printClassCredits();
         printPrerequisites();
+        System.out.println("-------------------");
     }
     
     @Override

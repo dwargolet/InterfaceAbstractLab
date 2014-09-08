@@ -96,6 +96,7 @@ public class IntroJavaCourse implements CourseCatalog{
         printClassNumber();
         printClassCredits();
         printPrerequisites();
+        System.out.println("-------------------");
     }
     
     @Override

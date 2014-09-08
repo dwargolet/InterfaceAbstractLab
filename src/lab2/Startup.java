@@ -13,7 +13,6 @@ public class Startup {
         advancedJava.setCourseNumber("7893");
         advancedJava.setClassCredits(4);
         advancedJava.printClassInfo();
-        System.out.println("-------------------");
         
         IntroJavaCourse introJavaClass = new IntroJavaCourse();
  
@@ -23,8 +22,6 @@ public class Startup {
         introJavaClass.setClassCredits(3);
 
         introJavaClass.printClassInfo();
-        
-        System.out.println("-------------------");
          
         IntroToProgrammingCourse introProgramClass = new IntroToProgrammingCourse();
  
